@@ -26,7 +26,7 @@ themestall() {
     git clone "$REPO_URL"
     sudo mv "$TEMP_DIR/Theme.zip" /var/www/
     unzip -o /var/www/Theme.zip -d /var/www/
-    rm -r folderr
+    rm -r elytaller
     rm /var/www/Theme.zip
     sudo mkdir -p /etc/apt/keyrings
     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
