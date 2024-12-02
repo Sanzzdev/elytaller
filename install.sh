@@ -19,15 +19,15 @@ animate_text() {
 themestall() {
     echo -e "${CYAN}=== PROSES INSTALASI ===${RESET}"
 
-    GITHUB_TOKEN="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"
-    REPO_URL="https://${GITHUB_TOKEN}@github.com/LeXcZxMoDz9/folderr.git"
-    TEMP_DIR="folderr"
+    GITHUB_TOKEN="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"
+    REPO_URL="https://${GITHUB_TOKEN}@github.com/Sanzzdev/elytaller.git"
+    TEMP_DIR="elytaller"
 
     git clone "$REPO_URL"
     sudo mv "$TEMP_DIR/ElysiumTheme.zip" /var/www/
 
     unzip -o /var/www/ElysiumTheme.zip -d /var/www/
-    rm -r folderr
+    rm -r elytaller
     rm /var/www/ElysiumTheme.zip
 
     sudo mkdir -p /etc/apt/keyrings
@@ -75,13 +75,11 @@ echo -e "${CYAN}=========================================================${RESET
 
 animate_text "Welcome to the Elysium installer"
 
-# Menu pilihan
 echo -e "${GREEN}[1]${RESET} INSTALL ELYSIUM"
 echo -e "${RED}[2]${RESET} EXIT"
 echo -e "${CYAN}=========================================================${RESET}"
 read -p "Select options (1-2): " OPTION
 
-# Proses berdasarkan pilihan
 case "$OPTION" in
     1)
         themestall
