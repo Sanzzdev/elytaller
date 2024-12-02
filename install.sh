@@ -16,6 +16,21 @@ animate_text() {
     echo ""
 }
 
+verify_license() {
+    LICENSE_KEY="Xlanzdev"  
+
+    read -p "TYPE YOUR LICENSE: " INPUT_KEY
+
+    if [ "$INPUT_KEY" != "$LICENSE_KEY" ]; then
+        echo -e "${RED}Licensi Salah, Silahkan Beli Licensi Di link berikut"
+        echo -e "https://xlanznet.site${RESET}"
+        exit 1
+    else
+        echo -e "${GREEN}License verified successfully.${RESET}"
+    fi
+}
+
+
 themestall() {
     echo -e "${CYAN}=== PROSES INSTALASI ===${RESET}"
 
@@ -74,6 +89,9 @@ echo -e "${CYAN} ╚═════╝ ╚══════╝╚════�
 echo -e "${CYAN}=========================================================${RESET}"
 
 animate_text "Welcome to the Elysium installer"
+
+# Verify the license key before proceeding
+verify_license
 
 echo -e "${GREEN}[1]${RESET} INSTALL ELYSIUM"
 echo -e "${RED}[2]${RESET} EXIT"
